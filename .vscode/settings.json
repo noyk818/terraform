@@ -1,0 +1,3 @@
+{
+    "files.autoSave": "afterDelay", // ファイルの変更内容を自動保存
+}
