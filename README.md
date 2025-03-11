@@ -16,9 +16,12 @@ terraform fmt
 ## インポートしたい(importsブロックを追加後)
 terraform plan -generate-config-out=test2.tf
 terraform import aws_ecs_task_definition.my_task my-task-family:498
+terraform state show aws_s3_bucket.terraform_import_demo2
 ## 登録されているリソース確認
 terraform state list
 terraform state show {リソース}
+## 管理対象から外す
+terraform state rm aws_s3_bucket.terraform_import_demo
 
 # 設定
 ## アカウント情報とかを共有したい場合
