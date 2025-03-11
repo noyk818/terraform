@@ -13,3 +13,6 @@ shared.tf
 
 # File
 *.pdf
+*.zip
+*.tar.gz
+*.tar
