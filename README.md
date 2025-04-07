@@ -1,4 +1,7 @@
 # terraform
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+
 # メモ
 - tfstate：状態情報を保持するファイル
 - tfstate.backup：上記の1世代前
