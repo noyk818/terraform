@@ -16,3 +16,6 @@ shared.tf
 *.zip
 *.tar.gz
 *.tar
+
+# Directories
+lambda-terraform-executor/
