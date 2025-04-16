@@ -1,10 +1,16 @@
 version: 0.2
 
 phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com
   build:
     commands:
-      - echo "Building HTML site"
-      - docker build -t html-site-demo .
-      - $(aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com)
+      - echo Build started on `date`
+      - docker build -f ecs-cicd-deploy/cicd/Dockerfile -t html-site-demo .
       - docker tag html-site-demo:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/html-site-demo:latest
+  post_build:
+    commands:
+      - echo Build completed on `date`
       - docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/html-site-demo:latest
