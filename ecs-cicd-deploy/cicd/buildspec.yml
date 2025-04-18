@@ -17,4 +17,4 @@ phases:
       - echo "[{\"name\":\"html-site-demo\",\"imageUri\":\"${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/html-site-demo:latest\"}]" > imagedefinitions.json
 
 artifacts:
-   files: imagedefinition.json
+   files: imagedefinitions.json
