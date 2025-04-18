@@ -1,0 +1,22 @@
+# 概要
+- ECSとCodePipelineを構築
+- cicdディレクトリ配下のDockerfileとindex.htmlを利用してECSにデプロイ
+
+# 使用リソース
+- aws_ecr_repository
+  - リポジトリ作成
+- aws_s3_bucket
+  - CodePipelineアーティファクト用バケット作成
+- random_id
+- aws_iam_role
+  - CodeBuild、CodePipeline用のロール作成
+- aws_iam_role_policy_attachment
+  - 既存のポリシをアタッチ
+- aws_iam_role_policy
+  - ポリシを作成
+- aws_codestarconnections_connection
+  - Githubと連携
+- aws_codebuild_project
+  - ビルドプロジェクト作成(buildspec.ymlを指定)
+- aws_codepipeline
+  - パイプライン作成
