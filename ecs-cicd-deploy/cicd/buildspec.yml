@@ -14,3 +14,5 @@ phases:
     commands:
       - echo Build completed on `date`
       - docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/html-site-demo:latest
+  artifacts:
+    files: imagedefinition.json
