@@ -34,6 +34,7 @@ mklink shared.tf ..\shared.tf
 ln -s ../shared.tf shared.tf
 
 ## shared設定
+```sh
 provider "aws" {
   region  = var.default_region
   profile = ""
@@ -44,3 +45,4 @@ variable "default_region" {
   type        = string
   default     = "ap-northeast-1"
 }
+```
