@@ -18,4 +18,3 @@ shared.tf
 *.tar
 
 # Directories
-lambda-terraform-executor/
