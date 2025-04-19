@@ -32,3 +32,15 @@ terraform state rm aws_s3_bucket.terraform_import_demo
 mklink shared.tf ..\shared.tf
 ### Linux
 ln -s ../shared.tf shared.tf
+
+## shared設定
+provider "aws" {
+  region  = var.default_region
+  profile = ""
+}
+
+variable "default_region" {
+  description = "Default region."
+  type        = string
+  default     = "ap-northeast-1"
+}
