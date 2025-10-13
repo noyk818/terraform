@@ -1,5 +1,6 @@
 # 概要
 - Cognitoを構築してM2MのCredential認証を行う
+- M2MのOAuth2.0許可タイプ：クライアント認証情報の場合、$6程度課金される
 
 # 使用リソース
 - aws_cognito_user_pool

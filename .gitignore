@@ -16,5 +16,7 @@ shared.tf
 *.zip
 *.tar.gz
 *.tar
+*Debug*
+*obj*
 
 # Directories
